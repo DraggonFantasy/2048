@@ -1,4 +1,5 @@
-function HTMLActuator() {
+function HTMLActuator(config) {
+  this.config = config;
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
@@ -62,7 +63,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  inner.textContent = this.config.getTileValue(tile);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first

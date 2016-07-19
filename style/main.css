@@ -1,4 +1,36 @@
-@import url(fonts/clear-sans.css);
+/*@import url(fonts/clear-sans.css);*/
+@font-face {
+    font-family: "Clear Sans";
+    src: url("ClearSans-Light-webfont.eot");
+    src: url("ClearSans-Light-webfont.eot?#iefix") format("embedded-opentype"),
+         url("ClearSans-Light-webfont.svg#clear_sans_lightregular") format("svg"),
+         url("ClearSans-Light-webfont.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Clear Sans";
+    src: url("ClearSans-Regular-webfont.eot");
+    src: url("ClearSans-Regular-webfont.eot?#iefix") format("embedded-opentype"),
+         url("ClearSans-Regular-webfont.svg#clear_sansregular") format("svg"),
+         url("ClearSans-Regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Clear Sans";
+    src: url("ClearSans-Bold-webfont.eot");
+    src: url("ClearSans-Bold-webfont.eot?#iefix") format("embedded-opentype"),
+         url("ClearSans-Bold-webfont.svg#clear_sansbold") format("svg"),
+         url("ClearSans-Bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -517,8 +549,9 @@ hr {
   line-height: 42px;
   margin-bottom: 0; }
 
-.restart-button {
+.restart-button, .customize-button {
   display: inline-block;
+  margin-top: 1px;
   background: #8f7a66;
   border-radius: 3px;
   padding: 0 20px;
@@ -529,6 +562,7 @@ hr {
   display: block;
   text-align: center;
   float: right; }
+  
 
 .game-explanation {
   margin-top: 50px; }
@@ -756,3 +790,18 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+
+/* Customization stuff */
+
+.game-customization
+{
+	margin: 5px;
+	text-align: center;
+	border: 1px solid #776e65;
+	border-radius: 10px;	
+}
+
+#custom-css
+{
+	width: 80%;
+}

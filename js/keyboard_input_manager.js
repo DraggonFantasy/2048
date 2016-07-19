@@ -49,11 +49,16 @@ KeyboardInputManager.prototype.listen = function () {
     65: 3  // A
   };
 
+  var pauseTags = ["INPUT", "TEXTAREA"];
+
   // Respond to direction keys
   document.addEventListener("keydown", function (event) {
     var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
                     event.shiftKey;
     var mapped    = map[event.which];
+	
+	// Don't send input events if <input> (or similar element) is focused
+	if( pauseTags.indexOf(document.activeElement.tagName) != -1 ) return;
 
     if (!modifiers) {
       if (mapped !== undefined) {

@@ -29,7 +29,37 @@
     <div class="above-game">
       <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
       <a class="restart-button">New Game</a>
+      <a class="customize-button">Toggle customization</a>
     </div>
+     
+     <div class="game-customization">
+     	<p><strong>Customization</strong></p>
+     	<!-- TODO: Think about generating this stuff dynamically with JS -->
+     	<table>
+			<tr><td></td><td><input type="text" id="custom-field-size" value="500" /></td><td>Field size (px)</td></tr>
+			<tr><td></td><td><input type="text" id="custom-page-background" value="" /></td><td>Page Background</td></tr>
+			<tr><td></td><td><input type="text" id="custom-grid-background" value="" /></td><td>Grid Background</td></tr>
+		
+     		<tr><td colspan="3"><strong>Tiles</strong></td></tr>
+			<tr><td></td><td><strong>Background</strong><br>Enter CSS value or image URL<br></td><td>Text</td></tr>
+			<tr><td>2</td><td><input type="text" id="custom-tile-back-2" /></td><td> <input type="text" id="custom-tile-value-2" value="2" /></td></tr>
+     		<tr><td>4</td><td><input type="text" id="custom-tile-back-4" /></td><td> <input type="text" id="custom-tile-value-4" value="4"/></td></tr>
+     		<tr><td>8</td><td><input type="text" id="custom-tile-back-8" /></td><td> <input type="text" id="custom-tile-value-8" value="8"/></td></tr>
+     		<tr><td>16</td><td><input type="text" id="custom-tile-back-16" /></td><td> <input type="text" id="custom-tile-value-16" value="16"/></td></tr>
+     		<tr><td>32</td><td><input type="text" id="custom-tile-back-32" /></td><td> <input type="text" id="custom-tile-value-32" value="32"/></td></tr>
+     		<tr><td>64</td><td><input type="text" id="custom-tile-back-64" /></td><td> <input type="text" id="custom-tile-value-64" value="64"/></td></tr>
+     		<tr><td>128</td><td><input type="text" id="custom-tile-back-128" /></td><td> <input type="text" id="custom-tile-value-128" value="128"/></td></tr>
+     		<tr><td>256</td><td><input type="text" id="custom-tile-back-256" /></td><td> <input type="text" id="custom-tile-value-256" value="256"/></td></tr>
+     		<tr><td>512</td><td><input type="text" id="custom-tile-back-512" /></td><td> <input type="text" id="custom-tile-value-512" value="512"/></td></tr>
+     		<tr><td>1024</td><td><input type="text" id="custom-tile-back-1024" /></td><td> <input type="text" id="custom-tile-value-1024" value="1024"/></td></tr>
+     		<tr><td>2048</td><td><input type="text" id="custom-tile-back-2048" /></td><td> <input type="text" id="custom-tile-value-2048" value="2048"/></td></tr>
+     		<tr><td colspan="3"> <input type="button" id="customize-apply" value="Apply" /> </td></tr>
+     	</table>
+     	<p><strong>Custom css</strong></p>
+     	<textarea id="custom-css"></textarea>
+     	<input type="button" id="custom-css-apply" value="Apply custom CSS" />
+     	<input type="button" id="custom-fix-tile-backgrounds" value="Fix tile image backgrounds" />
+     </div>
 
     <div class="game-container">
       <div class="game-message">
@@ -39,6 +69,7 @@
           <a class="retry-button">Try again</a>
         </div>
       </div>
+      
 
       <div class="grid-container">
         <div class="grid-row">
@@ -77,11 +108,13 @@
     </p>
     <hr>
     <p>
-    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
+	<strong class="important">Note:</strong> This site is <strong>NOT</strong> the official version of 2048 and should be used with caution.
     </p>
     <hr>
     <p>
-    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    Customizable version Created by <strong>DraggonFantasy</strong>
+    <br>
+    Original version Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
     </p>
   </div>
 
@@ -95,5 +128,7 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+  
+  <script src="js/configurator.js"></script>
 </body>
 </html>
